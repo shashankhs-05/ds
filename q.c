@@ -1,5 +1,7 @@
 
 
+
+
 #include <stdio.h>
 #include<stdlib.h>
 #define size 3
@@ -23,7 +25,10 @@ void delete(){
     printf("\nDeleted element=%d",a[front++]);
 }
 void display(){
-    printf("The elements are");
+    if(rear==-1||front==size)
+    printf("\nUnderflow");
+    else
+    printf("The elements are: ");
     for(int i=front;i<=rear;i++)
     {
         printf("%d\t",a[i]);

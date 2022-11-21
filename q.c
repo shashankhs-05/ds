@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 #include<stdlib.h>
 #define size 3
@@ -15,7 +17,7 @@ void insert(){
    }
 }
 void delete(){
-    if(rear==-1&&front==size)
+    if(rear==-1||front==size)
     printf("\nUnderflow");
     else
     printf("\nDeleted element=%d",a[front++]);
@@ -32,7 +34,7 @@ int main()
     int choice;
    
     while(1){
-         printf("\nEnter choice\n1.Push\n2.Pop\n3.Display\n4.Exit");
+         printf("\nEnter choice\n1.Insert\n2.Delete\n3.Display\n4.Exit");
     scanf("%d",&choice);
     switch(choice)
     {
